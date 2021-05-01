@@ -37,7 +37,7 @@ const mixin = {
     mounted() {
         this.$el.addEventListener('transitionend', this._endListener, { passive: true })
     },
-    destroyed() {
+    unmounted() {
         this.$el.removeEventListener('transitionend', this._endListener, { passive: true })
     },
     beforeUpdate() {
